@@ -4,6 +4,7 @@ import { globalStyles } from '../../styles/globalStyles'
 import Swiper from 'react-native-swiper'
 import { appInfo } from '../../constants/appInfo'
 import { appColor } from '../../constants/appColors'
+import { TextComponent } from '../../components'
 
 const Onboarding = ({ navigation }: any) => {
 
@@ -47,10 +48,10 @@ const Onboarding = ({ navigation }: any) => {
         alignItems: 'center',
       }]}>
         <TouchableOpacity onPress={() => navigation.navigate('LoginScreen')}>
-          <Text style={[styles.text,{color:appColor.gray2}]}>Skip</Text>
+          <TextComponent text='Skip' color={appColor.gray2}/>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => index < 2 ? setIndex(index + 1) : navigation.navigate('LoginScreen')}>
-          <Text style={[styles.text]}>Next</Text>
+          <TextComponent text='Next' color={appColor.white}/>
         </TouchableOpacity>
       </View>
     </View>
