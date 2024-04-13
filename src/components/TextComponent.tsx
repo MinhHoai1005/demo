@@ -17,16 +17,17 @@ interface Props {
 const TextComponent = (props: Props) => {
 
     const { text, color, size, flex, styles, title } = props
-    
+
     return (
         <Text style={[
             globalStyles.text,
             {
                 color: color ?? appColor.text,
                 flex: flex ?? 0,
-                fontSize: size ?? title ? 24 : 14,
+                fontSize: size ? size : title ? 24 : 14,
                 fontFamily: fontFamilies.basic,
-            }]}
+            }, styles]
+        }
         >{text}
         </Text>
     )

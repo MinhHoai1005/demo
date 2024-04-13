@@ -1,3 +1,4 @@
+import ForgotPassword from "./auth/ForgotPassword";
 import LoginScreen from "./auth/LoginScreen";
 import OnboardingScreen from "./auth/OnboardingScreen";
 import HomeScreen from "./home/HomeScreen";
@@ -8,4 +9,5 @@ export {
     LoginScreen,
     SplashScreen,
     OnboardingScreen,
+    ForgotPassword,
 }
